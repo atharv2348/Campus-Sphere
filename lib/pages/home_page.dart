@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:smart_campus/constants/app_colors.dart';
-import 'package:smart_campus/controllers/home_page_controller.dart';
-import 'package:smart_campus/controllers/link_controller.dart';
 import 'package:smart_campus/controllers/news_and_update_controller.dart';
 import 'package:smart_campus/controllers/theme_controller.dart';
-import 'package:smart_campus/utils/app_url_launcher.dart';
-import 'package:smart_campus/utils/dynamic_links.dart';
 import 'package:smart_campus/utils/navigation.dart';
 import 'package:smart_campus/widgets/carousel_images.dart';
 import 'package:smart_campus/widgets/contact_us_container.dart';
@@ -20,15 +14,14 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final LinkController linkController = Get.find();
     final NewsAndUpdateController newsAndUpdateController = Get.find();
     return Obx(
       () => Scaffold(
-        appBar: PrimaryAppBar(),
+        appBar: const PrimaryAppBar(),
         backgroundColor: ThemeController.scaffoldBackgroudColor.value,
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsetsDirectional.symmetric(
+            padding: const EdgeInsetsDirectional.symmetric(
               horizontal: 10,
               vertical: 12,
             ),
@@ -38,17 +31,17 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
                 ),
-                CarouselImages(),
-                SizedBox(
+                const CarouselImages(),
+                const SizedBox(
                   height: 20,
                 ),
-                TitleContainer(
+                const TitleContainer(
                   title: 'Important',
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Wrap(
+                const Wrap(
                   runSpacing: 10,
                   direction: Axis.horizontal,
                   alignment: WrapAlignment.center,
@@ -70,18 +63,18 @@ class HomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                TitleContainer(
+                const TitleContainer(
                   title: 'News And Updates',
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Obx(
                   () => newsAndUpdateController.data.isEmpty
-                      ? SizedBox()
+                      ? const SizedBox()
                       : Wrap(
                           runSpacing: 10,
                           direction: Axis.horizontal,
@@ -116,16 +109,16 @@ class HomePage extends StatelessWidget {
                           // ],
                         ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                TitleContainer(
+                const TitleContainer(
                   title: 'About GCEK',
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
-                Wrap(
+                const Wrap(
                   direction: Axis.horizontal,
                   runSpacing: 10,
                   alignment: WrapAlignment.center,
@@ -165,11 +158,11 @@ class HomePage extends StatelessWidget {
                     // ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                ContactUsContainer(),
-                SizedBox(
+                const ContactUsContainer(),
+                const SizedBox(
                   height: 10,
                 ),
               ],

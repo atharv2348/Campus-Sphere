@@ -13,25 +13,20 @@ class NewsAndUpdateController extends GetxController {
   }
 
   Future<void> fetchData() async {
-    try {
-      CollectionReference collection =
-          FirebaseFirestore.instance.collection(CodeConstants.newsAndUpdates);
+    CollectionReference collection =
+        FirebaseFirestore.instance.collection(CodeConstants.newsAndUpdates);
 
-      QuerySnapshot querySnapshot = await collection.get();
+    QuerySnapshot querySnapshot = await collection.get();
 
-      data.clear();
-      for (var doc in querySnapshot.docs) {
-        // data.add(NewsAndUpdatesModel.fromJson({
-        //   'name': doc['name'],
-        //   'url': doc['url'],
-        //   'imageUrl': doc['imageUrl'],
-        // }));
-        print(doc.data());
-        final docData = doc.data() as Map<String, dynamic>;
-        data.add(NewsAndUpdatesModel.fromJson(docData));
-      }
-    } catch (e) {
-      print("🚨 ${e}");
+    data.clear();
+    for (var doc in querySnapshot.docs) {
+      // data.add(NewsAndUpdatesModel.fromJson({
+      //   'name': doc['name'],
+      //   'url': doc['url'],
+      //   'imageUrl': doc['imageUrl'],
+      // }));
+      final docData = doc.data() as Map<String, dynamic>;
+      data.add(NewsAndUpdatesModel.fromJson(docData));
     }
   }
 }

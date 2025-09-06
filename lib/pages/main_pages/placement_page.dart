@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_campus/constants/app_colors.dart';
 import 'package:smart_campus/data/placement_data.dart';
-import 'package:smart_campus/pages/main_pages/about_gcek_page.dart';
 import 'package:smart_campus/utils/navigation.dart';
 import 'package:smart_campus/widgets/primary_app_bar.dart';
 import 'package:go_router/go_router.dart';
@@ -13,12 +12,12 @@ class PlacementPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: PrimaryAppBar(
+        appBar: const PrimaryAppBar(
           title: 'Placement Records',
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             child: Center(
                 child: Wrap(
               alignment: WrapAlignment.start,
@@ -49,7 +48,7 @@ class PlacementPage extends StatelessWidget {
                               horizontal: 10,
                               vertical: 10,
                             ),
-                            child: Text('Year 20${e}'),
+                            child: Text('Year 20$e'),
                           )),
                         ),
                       );
@@ -57,12 +56,12 @@ class PlacementPage extends StatelessWidget {
                   )
                   .toList()
                   .animate(
-                    delay: Duration(
+                    delay: const Duration(
                       milliseconds: 400,
                     ),
                   )
                   .fadeIn(
-                    duration: Duration(
+                    duration: const Duration(
                       milliseconds: 400,
                     ),
                     curve: Curves.easeIn,
@@ -70,7 +69,7 @@ class PlacementPage extends StatelessWidget {
                   .slideY(
                     begin: 0.5,
                     end: 0,
-                    duration: Duration(
+                    duration: const Duration(
                       milliseconds: 400,
                     ),
                   ),

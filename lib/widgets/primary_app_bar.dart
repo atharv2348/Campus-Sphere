@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smart_campus/constants/app_colors.dart';
 import 'package:smart_campus/controllers/theme_controller.dart';
 import 'package:get/get.dart';
 
@@ -26,6 +25,5 @@ class PrimaryAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

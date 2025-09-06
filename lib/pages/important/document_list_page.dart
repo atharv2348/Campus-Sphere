@@ -1,7 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_campus/data/documents_data.dart';
-import 'package:smart_campus/models/document_list_model.dart';
 import 'package:smart_campus/widgets/info_container.dart';
 import 'package:smart_campus/widgets/info_list_container.dart';
 import 'package:smart_campus/widgets/primary_app_bar.dart';
@@ -19,7 +17,7 @@ class DocumentListPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(
+          padding: const EdgeInsets.all(
             12,
           ),
           child: Column(
@@ -29,28 +27,28 @@ class DocumentListPage extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              TitleContainer(title: 'Eligibility Criteria'),
+              const TitleContainer(title: 'Eligibility Criteria'),
               InfoListContainer(
                 data: DocumentsData.eligibility[categoryName] ??
                     DocumentsData.normalEligibility,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              TitleContainer(title: 'Income Certificate'),
+              const TitleContainer(title: 'Income Certificate'),
               InfoContainer(
                   fontSize: 14,
                   title: DocumentsData.incomeCertificate[categoryName] ??
                       'Not Required'),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              TitleContainer(title: 'Documents Required'),
+              const TitleContainer(title: 'Documents Required'),
               ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 itemCount: DocumentsData.documents[categoryName]!.length,
                 itemBuilder: (context, index) {

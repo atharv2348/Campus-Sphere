@@ -1,8 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:smart_campus/constants/app_colors.dart';
-import 'package:smart_campus/widgets/info_container.dart';
 
 class InfoListContainer extends StatelessWidget {
   final List<String> data;
@@ -22,14 +20,14 @@ class InfoListContainer extends StatelessWidget {
               itemCount: data.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: EdgeInsets.symmetric(
+                  padding: const EdgeInsets.symmetric(
                     vertical: 5,
                     horizontal: 10,
                   ),
                   child: Text(
                     textAlign: TextAlign.start,
                     "- ${data[index]}",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 12,
                     ),
                   ),
@@ -37,12 +35,12 @@ class InfoListContainer extends StatelessWidget {
               },
             ))
         .animate(
-          delay: Duration(
+          delay: const Duration(
             milliseconds: 500,
           ),
         )
         .fadeIn(
-          duration: Duration(
+          duration: const Duration(
             milliseconds: 400,
           ),
         )

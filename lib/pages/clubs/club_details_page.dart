@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:smart_campus/models/club_model.dart';
 import 'package:smart_campus/widgets/info_container.dart';
 import 'package:smart_campus/widgets/primary_app_bar.dart';
@@ -21,16 +20,9 @@ class _ClubDetailsPageState extends State<ClubDetailsPage> {
   Timer? timer;
   double scrollSpeed = 1.0;
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    // startScrolling();
-  }
-
   void startScrolling() {
     timer = Timer.periodic(
-      Duration(
+      const Duration(
         milliseconds: 16,
       ),
       (timer) {
@@ -63,7 +55,7 @@ class _ClubDetailsPageState extends State<ClubDetailsPage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -72,7 +64,7 @@ class _ClubDetailsPageState extends State<ClubDetailsPage> {
                 width: MediaQuery.of(context).size.width,
               ),
               Hero(
-                tag: 'logo',
+                tag: widget.clubModel.name.toString(),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: CachedNetworkImage(
@@ -80,7 +72,7 @@ class _ClubDetailsPageState extends State<ClubDetailsPage> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               InfoContainer(
@@ -90,13 +82,13 @@ class _ClubDetailsPageState extends State<ClubDetailsPage> {
                 textAlign: TextAlign.start,
                 textPadding: true,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              TitleContainer(
+              const TitleContainer(
                 title: 'Event and Club Activities',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               SingleChildScrollView(
@@ -106,7 +98,7 @@ class _ClubDetailsPageState extends State<ClubDetailsPage> {
                   children: widget.clubModel.images.map(
                     (e) {
                       return Padding(
-                        padding: EdgeInsets.symmetric(
+                        padding: const EdgeInsets.symmetric(
                           horizontal: 10,
                         ),
                         child: ClipRRect(
@@ -136,7 +128,7 @@ class _ClubDetailsPageState extends State<ClubDetailsPage> {
                   ).toList(),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               TitleContainer(

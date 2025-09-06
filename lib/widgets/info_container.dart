@@ -1,12 +1,8 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:smart_campus/constants/app_colors.dart';
 import 'package:go_router/go_router.dart';
-import 'package:smart_campus/models/document_list_model.dart';
 import 'package:smart_campus/utils/app_url_launcher.dart';
-import 'package:smart_campus/utils/navigation.dart';
 
 class InfoContainer extends StatelessWidget {
   final String title;
@@ -38,11 +34,11 @@ class InfoContainer extends StatelessWidget {
         }
       },
       child: Container(
-        constraints: BoxConstraints(
+        constraints: const BoxConstraints(
           minHeight: 50,
         ),
         margin: const EdgeInsets.symmetric(vertical: 1),
-        padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
+        padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 5),
         decoration: BoxDecoration(
           color: AppColors.palate5,
           borderRadius: BorderRadius.circular(12),
@@ -70,7 +66,7 @@ class InfoContainer extends StatelessWidget {
           ),
         )
         .fadeIn(
-          duration: Duration(
+          duration: const Duration(
             milliseconds: 600,
           ),
           curve: Curves.easeInOut,

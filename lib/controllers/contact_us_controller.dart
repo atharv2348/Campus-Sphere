@@ -11,24 +11,17 @@ class ContactUsController extends GetxController {
   }
 
   Future<void> fetchData() async {
-    try {
-      final DocumentSnapshot doc = await FirebaseFirestore.instance
-          .collection('dynamic_links')
-          .doc('contact_us')
-          .get();
-      if (doc.exists) {
-        final apiData = doc.data() as Map<String, dynamic>;
-        apiData.forEach(
-          (key, value) {
-            data[key] = value.toString();
-          },
-        );
-      } else {
-        print("✅ doc doesn't exists");
-      }
-      print("✅ $data");
-    } catch (e) {
-      print("🚨 Error occured while getting contact data $e");
+    final DocumentSnapshot doc = await FirebaseFirestore.instance
+        .collection('dynamic_links')
+        .doc('contact_us')
+        .get();
+    if (doc.exists) {
+      final apiData = doc.data() as Map<String, dynamic>;
+      apiData.forEach(
+        (key, value) {
+          data[key] = value.toString();
+        },
+      );
     }
   }
 }

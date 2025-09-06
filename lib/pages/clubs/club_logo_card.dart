@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:smart_campus/constants/app_colors.dart';
 import 'package:smart_campus/models/club_model.dart';
 import 'package:go_router/go_router.dart';
 import 'package:smart_campus/utils/navigation.dart';
@@ -21,7 +20,7 @@ class ClubLogoCard extends StatelessWidget {
           context.push(Navigation.clubDetailsPageRoute, extra: clubModel);
         },
         child: Hero(
-          tag: 'logo',
+          tag: clubModel.name.toString(),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: CachedNetworkImage(

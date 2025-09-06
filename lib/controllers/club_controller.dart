@@ -27,7 +27,6 @@ class ClubController extends GetxController {
       error.value = '';
       isLoading.value = false;
     } catch (e) {
-      print("Something went wrong ! ${e}");
       error.value = e.toString();
       clubs.clear();
       isLoading.value = false;

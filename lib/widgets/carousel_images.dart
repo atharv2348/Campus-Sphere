@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -17,14 +16,14 @@ class CarouselImages extends StatelessWidget {
       () {
         if (homePageController.homepageImages.isEmpty) {
           return Animate(
-            effects: [
+            effects: const [
               FadeEffect(
                   duration: Duration(
                 milliseconds: 100,
               ))
             ],
             child: Container(
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxHeight: 600,
                 maxWidth: 600,
               ),
@@ -44,7 +43,7 @@ class CarouselImages extends StatelessWidget {
           );
         }
         return Animate(
-          effects: [
+          effects: const [
             FadeEffect(
               duration: Duration(
                 seconds: 2,
@@ -52,7 +51,7 @@ class CarouselImages extends StatelessWidget {
             ),
           ],
           child: Container(
-            constraints: BoxConstraints(
+            constraints: const BoxConstraints(
               maxHeight: 600,
               maxWidth: 600,
             ),
@@ -66,7 +65,7 @@ class CarouselImages extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               child: CachedNetworkImage(
                 errorWidget: (context, url, error) {
-                  return Image(
+                  return const Image(
                     fit: BoxFit.cover,
                     image: AssetImage(
                       'assets/images/gcek1.jpg',
@@ -74,7 +73,7 @@ class CarouselImages extends StatelessWidget {
                   );
                 },
                 placeholder: (context, url) {
-                  return Image(
+                  return const Image(
                     fit: BoxFit.cover,
                     image: AssetImage(
                       'assets/images/gcek1.jpg',

@@ -1,5 +1,5 @@
 class ScholarshipData {
-  static const ScholarshipsDetails = [
+  static const scholarshipsDetails = [
     {
       "SC/ST": "100% scholarship on Tution fee & Development fee",
     },

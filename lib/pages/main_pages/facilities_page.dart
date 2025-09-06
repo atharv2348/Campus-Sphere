@@ -9,11 +9,11 @@ class FacilitiesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PrimaryAppBar(
+      appBar: const PrimaryAppBar(
         title: 'Facilities',
       ),
       body: Padding(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         child: ListView.builder(
           itemCount: FacilitiesData.features.length,
           itemBuilder: (context, index) {

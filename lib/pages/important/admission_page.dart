@@ -1,8 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:smart_campus/controllers/link_controller.dart';
-import 'package:smart_campus/main.dart';
 import 'package:smart_campus/utils/app_url_launcher.dart';
 import 'package:smart_campus/widgets/info_container.dart';
 import 'package:smart_campus/widgets/primary_app_bar.dart';
@@ -13,9 +9,8 @@ class AdmissionPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final LinkController linkController = Get.find<LinkController>();
     return Scaffold(
-      appBar: PrimaryAppBar(
+      appBar: const PrimaryAppBar(
         title: "Admission Info",
       ),
       body: SingleChildScrollView(
@@ -28,49 +23,49 @@ class AdmissionPage extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              TitleContainer(
+              const TitleContainer(
                 title: 'Engineering DTE Code',
               ),
-              InfoContainer(
+              const InfoContainer(
                 title: "EN - 6005",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              TitleContainer(
+              const TitleContainer(
                 title: 'GCEK Admission Office',
               ),
-              InfoContainer(
+              const InfoContainer(
                 title: "+919545272414",
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              TitleContainer(
+              const TitleContainer(
                 title: 'Admission Incharge',
               ),
               GestureDetector(
                 onTap: () {
                   AppUrlLauncher.launchPhone("+919545272414");
                 },
-                child: InfoContainer(
+                child: const InfoContainer(
                   title: "+919545272414",
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              TitleContainer(
+              const TitleContainer(
                 title: 'Get more info here',
                 link: 'gcek_old',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              TitleContainer(
+              const TitleContainer(
                 title: 'Get GCEK Cutoff here',
                 link: 'gcek_cutoff',
               ),

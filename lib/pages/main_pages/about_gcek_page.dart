@@ -1,9 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:smart_campus/data/about_gcek_data.dart';
-import 'package:smart_campus/widgets/carousel_images.dart';
 import 'package:smart_campus/widgets/info_container.dart';
 import 'package:smart_campus/widgets/primary_app_bar.dart';
 import 'package:smart_campus/widgets/title_container.dart';
@@ -14,12 +11,12 @@ class AboutGcekPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PrimaryAppBar(
+      appBar: const PrimaryAppBar(
         title: 'About GCEK',
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(
+          padding: const EdgeInsets.all(
             12,
           ),
           child: Column(
@@ -29,14 +26,14 @@ class AboutGcekPage extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width,
               ),
-              InfoContainer(
+              const InfoContainer(
                 textPadding: true,
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
                 title: AboutGcekData.message1,
                 textAlign: TextAlign.start,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               ClipRRect(
@@ -46,17 +43,17 @@ class AboutGcekPage extends StatelessWidget {
                   'assets/images/gcek1.jpg',
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              InfoContainer(
+              const InfoContainer(
                 textPadding: true,
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
                 title: AboutGcekData.message2,
                 textAlign: TextAlign.start,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               ClipRRect(
@@ -66,55 +63,55 @@ class AboutGcekPage extends StatelessWidget {
                   'assets/images/gcek2.png',
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              TitleContainer(title: 'Institude Vision'),
-              InfoContainer(
+              const TitleContainer(title: 'Institude Vision'),
+              const InfoContainer(
                 title: AboutGcekData.institudeVision,
                 textPadding: true,
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
                 textAlign: TextAlign.start,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              TitleContainer(title: 'Institude Mission'),
-              InfoContainer(
+              const TitleContainer(title: 'Institude Mission'),
+              const InfoContainer(
                 title: AboutGcekData.institudeMission,
                 textPadding: true,
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
                 textAlign: TextAlign.start,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              TitleContainer(title: 'Institude Objective'),
-              InfoContainer(
+              const TitleContainer(title: 'Institude Objective'),
+              const InfoContainer(
                 title: AboutGcekData.institudeObjective,
                 textPadding: true,
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
                 textAlign: TextAlign.start,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              TitleContainer(title: 'Short Range Goals'),
-              InfoContainer(
+              const TitleContainer(title: 'Short Range Goals'),
+              const InfoContainer(
                 title: AboutGcekData.shortRangeGoals,
                 textPadding: true,
                 fontSize: 12,
                 fontWeight: FontWeight.normal,
                 textAlign: TextAlign.start,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              TitleContainer(title: 'Principal'),
-              SizedBox(
+              const TitleContainer(title: 'Principal'),
+              const SizedBox(
                 height: 5,
               ),
               ClipRRect(
@@ -124,23 +121,23 @@ class AboutGcekPage extends StatelessWidget {
                   'assets/images/principal.jfif',
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 2,
               ),
-              Text(
+              const Text(
                 "DR. Vinayak N. Kulkarni",
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              TitleContainer(
+              const TitleContainer(
                 title: "Principal's Message",
               ),
-              InfoContainer(
+              const InfoContainer(
                 title: AboutGcekData.principalMessage,
                 textPadding: true,
                 fontSize: 12,
@@ -149,12 +146,12 @@ class AboutGcekPage extends StatelessWidget {
               ),
             ]
                 .animate(
-                  delay: Duration(
+                  delay: const Duration(
                     milliseconds: 100,
                   ),
                 )
                 .fadeIn(
-                  duration: Duration(
+                  duration: const Duration(
                     milliseconds: 400,
                   ),
                   curve: Curves.easeInQuint,
@@ -163,7 +160,7 @@ class AboutGcekPage extends StatelessWidget {
                   begin: 0.1,
                   end: 0,
                   curve: Curves.easeInQuint,
-                  duration: Duration(
+                  duration: const Duration(
                     milliseconds: 400,
                   ),
                 ),

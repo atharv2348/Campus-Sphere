@@ -16,7 +16,7 @@ class HomePageController extends GetxController {
 
   void changeImageIndex() {
     Timer.periodic(
-      Duration(seconds: 3),
+      const Duration(seconds: 3),
       (timer) {
         if (homepageImages.isNotEmpty) {
           if (currentIndex < homepageImages.length - 1) {
@@ -30,7 +30,6 @@ class HomePageController extends GetxController {
   }
 
   void fetchCarouselImages() async {
-    print("✅ function is called!");
     homepageImages.value = <String>[];
     try {
       final storageRef = FirebaseStorage.instance.ref().child('carousel');
@@ -40,7 +39,6 @@ class HomePageController extends GetxController {
         homepageImages.add(downloadUrl);
       }
     } catch (e) {
-      print("✅ ${e}");
       homepageImages.value = <String>[];
     }
   }

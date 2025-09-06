@@ -1,7 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:smart_campus/data/documents_data.dart';
 import 'package:smart_campus/models/club_model.dart';
-import 'package:smart_campus/models/document_list_model.dart';
 import 'package:smart_campus/pages/clubs/club_details_page.dart';
 import 'package:smart_campus/pages/clubs/club_landing_page.dart';
 import 'package:smart_campus/pages/home_page.dart';
@@ -15,7 +13,6 @@ import 'package:smart_campus/pages/main_pages/facilities_page.dart';
 import 'package:smart_campus/pages/main_pages/pdf_view.dart';
 import 'package:smart_campus/pages/main_pages/placement_page.dart';
 import 'package:smart_campus/pages/settings_page.dart';
-import 'package:smart_campus/pages/temp.dart';
 
 class Navigation {
   static const rootRoute = "/";
@@ -38,25 +35,25 @@ class Navigation {
       GoRoute(
         path: rootRoute,
         builder: (context, state) {
-          return HomePage();
+          return const HomePage();
         },
       ),
       GoRoute(
         path: settingsRoute,
         builder: (context, state) {
-          return SettingsPage();
+          return const SettingsPage();
         },
       ),
       GoRoute(
         path: admissionRoute,
         builder: (context, state) {
-          return AdmissionPage();
+          return const AdmissionPage();
         },
       ),
       GoRoute(
         path: documentsRoute,
         builder: (context, state) {
-          return DocumentsPage();
+          return const DocumentsPage();
         },
       ),
       GoRoute(
@@ -69,25 +66,25 @@ class Navigation {
       GoRoute(
         path: scholarshipRoute,
         builder: (context, state) {
-          return ScholarshipPage();
+          return const ScholarshipPage();
         },
       ),
       GoRoute(
         path: aboutGCEKRoute,
         builder: (context, state) {
-          return AboutGcekPage();
+          return const AboutGcekPage();
         },
       ),
       GoRoute(
         path: branchRoute,
         builder: (context, state) {
-          return BranchesPage();
+          return const BranchesPage();
         },
       ),
       GoRoute(
         path: facilitiesRoute,
         builder: (context, state) {
-          return FacilitiesPage();
+          return const FacilitiesPage();
         },
       ),
       GoRoute(
@@ -100,13 +97,13 @@ class Navigation {
       GoRoute(
         path: placementRecordRoute,
         builder: (context, state) {
-          return PlacementPage();
+          return const PlacementPage();
         },
       ),
       GoRoute(
         path: clubLandingRoute,
         builder: (context, state) {
-          return ClubLandingPage();
+          return const ClubLandingPage();
         },
       ),
       GoRoute(

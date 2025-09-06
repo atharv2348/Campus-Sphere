@@ -1,7 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_campus/data/scholarship_data.dart';
-import 'package:smart_campus/pages/main_pages/about_gcek_page.dart';
 import 'package:smart_campus/widgets/info_container.dart';
 import 'package:smart_campus/widgets/primary_app_bar.dart';
 import 'package:smart_campus/widgets/title_container.dart';
@@ -13,12 +11,12 @@ class ScholarshipPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PrimaryAppBar(
+      appBar: const PrimaryAppBar(
         title: "Scholarships",
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(12),
+          padding: const EdgeInsets.all(12),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -26,19 +24,19 @@ class ScholarshipPage extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
-              TitleContainer(title: 'Scholarships'),
-              SizedBox(
+              const TitleContainer(title: 'Scholarships'),
+              const SizedBox(
                 height: 10,
               ),
               ListView.builder(
                 shrinkWrap: true,
-                itemCount: ScholarshipData.ScholarshipsDetails.length,
+                itemCount: ScholarshipData.scholarshipsDetails.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: EdgeInsets.only(
+                    padding: const EdgeInsets.only(
                       top: 5,
                     ),
                     child: Row(
@@ -52,10 +50,10 @@ class ScholarshipPage extends StatelessWidget {
                             fontSize: 12,
                             fontWeight: FontWeight.bold,
                             title: ScholarshipData
-                                .ScholarshipsDetails[index].keys.first,
+                                .scholarshipsDetails[index].keys.first,
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 5,
                         ),
                         ConstrainedBox(
@@ -66,7 +64,7 @@ class ScholarshipPage extends StatelessWidget {
                             fontSize: 12,
                             fontWeight: FontWeight.normal,
                             title: ScholarshipData
-                                .ScholarshipsDetails[index].values.first,
+                                .scholarshipsDetails[index].values.first,
                           ),
                         ),
                       ],
@@ -79,19 +77,19 @@ class ScholarshipPage extends StatelessWidget {
                       )
                       .fadeIn(
                         curve: Curves.easeInQuint,
-                        duration: Duration(
+                        duration: const Duration(
                           milliseconds: 400,
                         ),
                       )
                       .slideY(
-                        duration: Duration(milliseconds: 400),
+                        duration: const Duration(milliseconds: 400),
                         begin: 0.5,
                         end: 0,
                         curve: Curves.easeInQuint,
                       );
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],

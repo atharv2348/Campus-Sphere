@@ -3,7 +3,7 @@ import 'package:smart_campus/widgets/primary_app_bar.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class PdfView extends StatefulWidget {
-  final year;
+  final String year;
   const PdfView(this.year, {super.key});
 
   @override
@@ -13,7 +13,7 @@ class PdfView extends StatefulWidget {
 class _PdfViewState extends State<PdfView> {
   @override
   Widget build(BuildContext context) {
-    String name = "${"assets/pdfs/" + widget.year}.pdf";
+    String name = "assets/pdfs/${widget.year}.pdf";
     return SafeArea(
       child: Scaffold(
         // appBar: PreferredSize(
@@ -38,9 +38,7 @@ class _PdfViewState extends State<PdfView> {
         //     centerTitle: true,
         //   ),
         // ),
-        appBar: PrimaryAppBar(
-          title: 'Year 20' + widget.year,
-        ),
+        appBar: PrimaryAppBar(title: "Year 20${widget.year}"),
         body: SfPdfViewer.asset(name),
         backgroundColor: const Color(0xFFf2e9e4),
       ),

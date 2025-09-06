@@ -12,17 +12,15 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeController themeController = Get.find();
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        print("✅ ${LocalStorage.getBool(LocalStorage.themeKey)}");
-      }),
-      appBar: PrimaryAppBar(
+      floatingActionButton: FloatingActionButton(onPressed: () {}),
+      appBar: const PrimaryAppBar(
         title: "Settings",
       ),
       body: Padding(
-        padding: EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Obx(
@@ -34,7 +32,7 @@ class SettingsPage extends StatelessWidget {
                 },
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(

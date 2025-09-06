@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:smart_campus/utils/navigation.dart';
 
 class TEMP extends StatelessWidget {
   const TEMP({super.key});
@@ -9,7 +7,7 @@ class TEMP extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Campus Sphere"),
+        title: const Text("Campus Sphere"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -20,7 +18,7 @@ class TEMP extends StatelessWidget {
             SizedBox(
               width: MediaQuery.of(context).size.width,
             ),
-            Text(
+            const Text(
               "Welcome to Campus Sphere App",
               style: TextStyle(
                 fontSize: 18,

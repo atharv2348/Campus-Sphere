@@ -6,7 +6,6 @@ class LocalStorage {
   // Initialize SharedPreferences
   static Future<void> init() async {
     _prefs = await SharedPreferences.getInstance();
-    print("✅ Local Storage initilized!");
   }
 
   // constants

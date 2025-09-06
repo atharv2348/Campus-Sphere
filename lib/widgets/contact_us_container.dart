@@ -1,7 +1,5 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:smart_campus/constants/app_colors.dart';
@@ -20,10 +18,10 @@ class ContactUsContainer extends StatelessWidget {
     return Obx(
       () {
         if (contactUsController.data == {}) {
-          return SizedBox();
+          return const SizedBox();
         }
         return Animate(
-          effects: [FadeEffect(), SlideEffect()],
+          effects: const [FadeEffect(), SlideEffect()],
           child: Container(
             width: MediaQuery.of(context).size.width * 0.9,
             decoration: BoxDecoration(
@@ -40,10 +38,10 @@ class ContactUsContainer extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      Text(
+                      const Text(
                         "CONTACT US",
                         style: TextStyle(
                           fontSize: 20,
@@ -51,14 +49,14 @@ class ContactUsContainer extends StatelessWidget {
                           color: AppColors.palate4,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 5,
                       ),
-                      divider_line(context),
-                      SizedBox(
+                      dividerLine(context),
+                      const SizedBox(
                         height: 5,
                       ),
-                      FittedBox(
+                      const FittedBox(
                         fit: BoxFit.scaleDown,
                         child: Text(
                           "Government College of Enginnering, Karad",
@@ -68,7 +66,7 @@ class ContactUsContainer extends StatelessWidget {
                           ),
                         ),
                       ),
-                      FittedBox(
+                      const FittedBox(
                         fit: BoxFit.scaleDown,
                         child: Text(
                           "(An Autonomous Instiute of Government of Mahartashtra)",
@@ -78,11 +76,11 @@ class ContactUsContainer extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
-                      divider_line(context),
-                      SizedBox(
+                      dividerLine(context),
+                      const SizedBox(
                         height: 10,
                       ),
                     ],
@@ -139,11 +137,11 @@ class ContactUsContainer extends StatelessWidget {
                   //     ),
                   //   ],
                   // ),
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  divider_line(context),
-                  SizedBox(
+                  dividerLine(context),
+                  const SizedBox(
                     height: 10,
                   ),
                   Column(
@@ -152,14 +150,14 @@ class ContactUsContainer extends StatelessWidget {
                       SizedBox(
                         width: MediaQuery.of(context).size.width,
                       ),
-                      Text(
+                      const Text(
                         "Follow us",
                         style: TextStyle(
                           fontSize: 18,
                           color: AppColors.palate4,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Wrap(
@@ -167,28 +165,28 @@ class ContactUsContainer extends StatelessWidget {
                         spacing: 20,
                         runSpacing: 10,
                         children: [
-                          SocialMediaIcon(
+                          socialMediaIcon(
                             path: 'assets/app_icons/linkdin.png',
                             key: CodeConstants.linkedin,
                           ),
-                          SocialMediaIcon(
+                          socialMediaIcon(
                             path: 'assets/app_icons/facebook.png',
                             key: CodeConstants.facebook,
                           ),
-                          SocialMediaIcon(
+                          socialMediaIcon(
                             path: 'assets/app_icons/youtube.png',
                             key: CodeConstants.youtube,
                           ),
-                          SocialMediaIcon(
+                          socialMediaIcon(
                             path: 'assets/app_icons/twitter.png',
                             key: CodeConstants.twitter,
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
-                      FittedBox(
+                      const FittedBox(
                         fit: BoxFit.scaleDown,
                         child: Text(
                           "© 2025 Campus Sphere. All rights reserved.",
@@ -198,7 +196,7 @@ class ContactUsContainer extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8,
                       ),
                       GestureDetector(
@@ -209,7 +207,7 @@ class ContactUsContainer extends StatelessWidget {
                             url,
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           'Privacy Policy',
                           style: TextStyle(
                             color: Colors.blue,
@@ -217,7 +215,7 @@ class ContactUsContainer extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                     ],
@@ -231,7 +229,7 @@ class ContactUsContainer extends StatelessWidget {
     );
   }
 
-  GestureDetector SocialMediaIcon({
+  GestureDetector socialMediaIcon({
     required String key,
     required String path,
   }) {
@@ -261,14 +259,14 @@ class ContactUsContainer extends StatelessWidget {
       text: TextSpan(
         children: [
           TextSpan(
-            text: firstText + ': ',
-            style: TextStyle(
+            text: '$firstText: ',
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
             ),
           ),
           TextSpan(
               text: secondText,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.normal,
               ),
               recognizer: TapGestureRecognizer()
@@ -286,7 +284,7 @@ class ContactUsContainer extends StatelessWidget {
     );
   }
 
-  Container divider_line(BuildContext context) {
+  Container dividerLine(BuildContext context) {
     return Container(
       height: 2,
       width: MediaQuery.of(context).size.width,

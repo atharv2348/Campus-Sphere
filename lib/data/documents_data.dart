@@ -1,13 +1,13 @@
 class DocumentsData {
   static const ssc = "SSC Marksheet";
   static const hsc = "HSC Marksheet";
-  static const mht_or_jee = "MHT-CET / JEE Marksheet";
+  static const mhtOrJEE = "MHT-CET / JEE Marksheet";
   static const leaving = 'Leaving Certificate';
   static const nationality = 'Nationality Certificate';
   static const domicile = 'Domicile Certificate';
   static const caste = "Caste Cetificate";
-  static const caste_validity = "Caste Validity";
-  static const non_cremy_layer = "Non Cremy Layer Certificate";
+  static const casteValidity = "Caste Validity";
+  static const nonCremyLayer = "Non Cremy Layer Certificate";
   static const ews = "EWS Certificate";
   static const categoryA = "Certificate from Performa A";
   static const categoryB = "Certificate from Performa B";
@@ -36,7 +36,7 @@ class DocumentsData {
         "documents": [
           ssc,
           hsc,
-          mht_or_jee,
+          mhtOrJEE,
           leaving,
           nationality,
           domicile,
@@ -53,7 +53,7 @@ class DocumentsData {
         "documents": [
           ssc,
           hsc,
-          mht_or_jee,
+          mhtOrJEE,
           leaving,
           nationality,
           domicile,
@@ -70,7 +70,7 @@ class DocumentsData {
         "documents": [
           ssc,
           hsc,
-          mht_or_jee,
+          mhtOrJEE,
           leaving,
           nationality,
           domicile,
@@ -87,13 +87,13 @@ class DocumentsData {
         "documents": [
           ssc,
           hsc,
-          mht_or_jee,
+          mhtOrJEE,
           leaving,
           nationality,
           domicile,
           caste,
-          caste_validity,
-          non_cremy_layer,
+          casteValidity,
+          nonCremyLayer,
         ],
       },
     },
@@ -107,13 +107,13 @@ class DocumentsData {
         "documents": [
           ssc,
           hsc,
-          mht_or_jee,
+          mhtOrJEE,
           leaving,
           nationality,
           domicile,
           caste,
-          caste_validity,
-          non_cremy_layer
+          casteValidity,
+          nonCremyLayer
         ],
       },
     },
@@ -127,13 +127,13 @@ class DocumentsData {
         "documents": [
           ssc,
           hsc,
-          mht_or_jee,
+          mhtOrJEE,
           leaving,
           nationality,
           domicile,
           caste,
-          caste_validity,
-          non_cremy_layer,
+          casteValidity,
+          nonCremyLayer,
           ews,
         ],
       },
@@ -148,13 +148,13 @@ class DocumentsData {
         "documents": [
           ssc,
           hsc,
-          mht_or_jee,
+          mhtOrJEE,
           leaving,
           nationality,
           domicile,
           caste,
-          caste_validity,
-          non_cremy_layer,
+          casteValidity,
+          nonCremyLayer,
         ],
       },
     },
@@ -168,7 +168,7 @@ class DocumentsData {
         "documents": [
           ssc,
           hsc,
-          mht_or_jee,
+          mhtOrJEE,
           leaving,
           nationality,
           domicile,
@@ -186,7 +186,7 @@ class DocumentsData {
         "documents": [
           ssc,
           hsc,
-          mht_or_jee,
+          mhtOrJEE,
           leaving,
           nationality,
           domicile,
@@ -204,7 +204,7 @@ class DocumentsData {
         "documents": [
           ssc,
           hsc,
-          mht_or_jee,
+          mhtOrJEE,
           leaving,
           nationality,
           domicile,
@@ -253,46 +253,46 @@ class DocumentsData {
   };
 
   static const documents = <String, List<String>>{
-    "OPEN Category": [ssc, hsc, mht_or_jee, leaving, nationality, domicile],
-    "TFWS Category": [ssc, hsc, mht_or_jee, leaving, nationality, domicile],
-    "EBC Category": [ssc, hsc, mht_or_jee, leaving, nationality, domicile],
+    "OPEN Category": [ssc, hsc, mhtOrJEE, leaving, nationality, domicile],
+    "TFWS Category": [ssc, hsc, mhtOrJEE, leaving, nationality, domicile],
+    "EBC Category": [ssc, hsc, mhtOrJEE, leaving, nationality, domicile],
     "OBC Category": [
       ssc,
       hsc,
-      mht_or_jee,
+      mhtOrJEE,
       leaving,
       nationality,
       domicile,
       caste,
-      caste_validity,
-      non_cremy_layer
+      casteValidity,
+      nonCremyLayer
     ],
     "SC / ST Category": [
       ssc,
       hsc,
-      mht_or_jee,
+      mhtOrJEE,
       leaving,
       nationality,
       domicile,
       caste,
-      caste_validity
+      casteValidity
     ],
-    "EWS Category": [ssc, hsc, mht_or_jee, leaving, nationality, domicile, ews],
+    "EWS Category": [ssc, hsc, mhtOrJEE, leaving, nationality, domicile, ews],
     "SBC / VJ / NT Category": [
       ssc,
       hsc,
-      mht_or_jee,
+      mhtOrJEE,
       leaving,
       nationality,
       domicile,
       caste,
-      caste_validity,
-      non_cremy_layer
+      casteValidity,
+      nonCremyLayer
     ],
     "Type-C Category": [
       ssc,
       hsc,
-      mht_or_jee,
+      mhtOrJEE,
       leaving,
       nationality,
       domicile,
@@ -301,7 +301,7 @@ class DocumentsData {
     "Type-D Category": [
       ssc,
       hsc,
-      mht_or_jee,
+      mhtOrJEE,
       leaving,
       nationality,
       domicile,
@@ -310,7 +310,7 @@ class DocumentsData {
     "Type-E Category": [
       ssc,
       hsc,
-      mht_or_jee,
+      mhtOrJEE,
       leaving,
       nationality,
       domicile,

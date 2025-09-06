@@ -1,13 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
 import 'package:smart_campus/constants/app_colors.dart';
 import 'package:smart_campus/utils/app_url_launcher.dart';
-import 'package:smart_campus/utils/navigation.dart';
 
 class TopicContainer extends StatelessWidget {
   final String text;
@@ -26,9 +23,8 @@ class TopicContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (imageUrl != null) print("🙈 ${imageUrl}");
     return Animate(
-      effects: [
+      effects: const [
         FadeEffect(
           duration: Duration(
             milliseconds: 800,
@@ -43,7 +39,7 @@ class TopicContainer extends StatelessWidget {
         ),
       ],
       child: Padding(
-        padding: EdgeInsetsDirectional.symmetric(horizontal: 5),
+        padding: const EdgeInsetsDirectional.symmetric(horizontal: 5),
         child: Material(
           elevation: 10,
           borderRadius: BorderRadius.circular(12),
@@ -53,7 +49,7 @@ class TopicContainer extends StatelessWidget {
               if (link != null) {
                 AppUrlLauncher.lauchTheUrl(link!);
               } else if (newPage != null) {
-                context.push('${newPage}');
+                context.push('$newPage');
               }
             },
             child: Container(
@@ -79,7 +75,7 @@ class TopicContainer extends StatelessWidget {
                           imageUrl: imageUrl ??
                               "https://firebasestorage.googleapis.com/v0/b/smart-campus-app.appspot.com/o/new_assets%2Fimages%2Fjee_main.png?alt=media&token=e6cba4fd-cd01-4d5f-87b7-bbacc3a658ed",
                         ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   FittedBox(
